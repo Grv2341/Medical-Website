@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Medical Records</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+<div id="title">
+	<span>Medical Records</span>
+	<img src="wound.png"><br><br>
+	<ul>
+		<li id="active"><a>Login</a></li>
+		<li><a href="signup.html">Signup</a></li>
+	</ul>
+</div>
+<div id="c1">
+	<form action="login.php" method="get">
+	<ul>
+	<li><input type="text" name="uname" placeholder="User Id"></li>
+	<li><input type="password" name="password" placeholder="Password"></li>
+	</ul>
+	<button type="submit" name="action1" value="doctor" id="list1"><img src="download.png"><span>Doctor</span></button>
+	<button type="submit" name="action2" value="patient" id="list2"><img src="patient.png"><span>Patient</span></button>
+	<button type="submit" name="action3" value="doctor" id="list3"><img src="chemist.png"><span>Chemist</span></button>
+	
+	</form>
+</div>
+</body>
+</html>

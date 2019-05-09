@@ -1,0 +1,201 @@
+body{
+	font-family: sans-serif;
+	margin:0;
+	padding:0;
+}
+#title{
+	padding:30px;
+	padding-top: 20px;
+	background: rgba(0,0,0,0);
+	text-align: right;
+}
+#title span{
+	font-family: Bahnschrift;
+	font-size: 70px;
+	color:rgb(246,141,45);
+	text-shadow: 1px 1px #ffffff;
+	float :right;
+}
+#title img{
+	height:70px;
+	width:70px;
+	margin-right: 20px;
+	vertical-align: text-bottom;
+}
+#menu ul{
+	list-style: none;
+	display:inline;
+}
+#menu ul li{
+text-align: center;
+padding:10px 20px 10px 20px;
+overflow: hidden;
+font-size:20px;
+color:black;
+float : right;
+margin-right: 15px;
+margin-left: 3px;
+margin-top: 3px;
+border:1.5px rgba(0,0,0,0.4);
+border-radius: 20px;
+background-size: 200% 100% !important;
+background: linear-gradient(to right, rgb(246,141,45) 50%, rgba(0,0,0,0.4) 50%);
+background-position: right bottom;
+}
+#menu{
+	width:100%;
+	box-shadow: 1px 4px 5px grey;
+	height:60px;
+	padding-top:5px;
+	background:white;
+}
+#menu ul li img{
+	width:25px;
+	height:25px;
+	vertical-align: text-bottom;
+	margin-right: 10px;
+}
+#menu ul li a{
+	text-decoration: none;
+	color:white;
+}
+#menu #active{
+	background: linear-gradient(to right, rgb(246,141,45) 50%, rgb(246,141,45) 50%);
+}
+#menu li:hover{
+	transition: all .3s ease-out;
+	cursor:pointer;
+	background-position: left bottom;
+}
+hr{
+	color:rgb(246,141,45);
+	border-color: rgb(246,141,45);
+	border:1px solid;
+	margin-bottom: 0px;
+
+}
+#body{
+	width:100%;
+	height:100%;
+	margin-top: 5px;
+}
+#left{
+	background:rgb(246,141,45);
+	width:20%;
+	height:100%;
+	display:block;
+	float:left;
+	text-align: center;
+	box-shadow: 4px 4px 3px grey;
+	z-index: 2;
+}
+#right{
+	background:white;
+	width:71%;
+	height:100%;
+	display:block;
+	float:right;
+	padding: 0px 4% 0px 4%;
+}
+#person{
+	height:100px;
+	text-align: center;
+	width:100px;
+	border:2px solid black;
+	background:rgba(255,255,255,0.7);
+	border-radius: 50%;
+	padding:0px;
+	overflow: hidden;
+	padding: 15px;
+	margin-left: 70px;
+	margin-top: 30px;
+}
+#person img{
+	width:80%;
+	height:80%;
+}
+#left #name ,.value{
+	color:white;
+	margin-top: 5px;
+	font-size: 25px;
+	font-weight: lighter;
+	font-family: 'Courier New';
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+#left #special{
+	color:#dddddd !important;
+	font-size: 18px;
+	font-family: "Comic sans Ms";
+}
+#left ul{
+	list-style: none;
+	display:inline;
+}
+#left ul li{
+	text-align:center;
+	width:100%;
+}
+#left .label{
+	font-size:15px;
+	color:#dddddd;
+	font-family: "Comic sans Ms";
+	margin-top: 15px;
+}
+#left .value{
+	font-size:20px;
+}
+#left button img{
+	width:15px;
+	height: 15px;
+	vertical-align: text-bottom;
+	margin-right: 5px;
+}
+#left button{
+	margin-top: 20px;
+	width:100px;
+	font-size: 15px;
+	padding:10px;
+	background:rgba(255,255,255,0.8);
+	border-radius: 22px;
+	border:1px solid rgb(246,141,45);
+}
+#left button:hover{
+	transition:all 0.5px ease-out;
+	border:1px solid grey;
+	background:rgba(255,255,255,0.6);
+	cursor: pointer;
+}	
+#right h1{
+	color:#777777;
+}
+#right .prescription{
+	padding:20px;
+	box-shadow: 2px 2px 8px grey; 
+	margin-top: 30px;
+	padding-top: 0px;
+}
+#right ul{
+	list-style: none;
+	display: inline;
+}
+#right ul li img{
+	width:20px;
+	height:20px;
+}
+#right li{
+	margin-top: 10px;
+}
+#name{
+	font-size: 27px;
+}
+#rating,#comment{
+	font-weight: bold;
+	color:#666666;
+	font-size: 20px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}

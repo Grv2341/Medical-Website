@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Medical Records</title>
+    <link rel="stylesheet" type="text/css" href="signup.css">
+    <script type="text/javascript">
+  function ani1(){
+    document.getElementById('c2').style.display ='block';
+    document.getElementById('c3').style.display ='none';
+    document.getElementById('c4').style.display ='none';
+    document.getElementById('list1').style.background="rgb(255,87,34)";
+    document.getElementById('list2').style.background="rgba(0,0,0,0.3)";
+    document.getElementById('list3').style.background="rgba(0,0,0,0.3)";
+  }
+  function ani2(){
+    document.getElementById('c2').style.display ='none';
+    document.getElementById('c3').style.display ='block';
+    document.getElementById('c4').style.display ='none';
+    document.getElementById('list1').style.background="rgba(0,0,0,0.3)";
+    document.getElementById('list2').style.background="rgb(255,24,0)"
+    document.getElementById('list3').style.background="rgba(0,0,0,0.3)";
+  }
+  function ani3(){
+    document.getElementById('c2').style.display ='none';
+    document.getElementById('c3').style.display ='none';
+    document.getElementById('c4').style.display ='block';
+    document.getElementById('list1').style.background="rgba(0,0,0,0.3)";
+    document.getElementById('list2').style.background="rgba(0,0,0,0.3)";
+    document.getElementById('list3').style.background="rgb(34,167,204)";
+  }
+  function validate1(){
+  	var x1 = document.forms["form1"]["password1"].value;
+  	var x2= document.forms["form1"]["password2"].value;
+  	if(x1!=x2){
+  		alert("Passwords dont match !");
+  	}
+  }
+  function validate2(){
+  	var x1 = document.forms["form2"]["password1"].value;
+  	var x2= document.forms["form2"]["password2"].value;
+  	if(x1!=x2){
+  		alert("Passwords dont match !");
+  	}
+  }
+  function validate3(){
+  	var x1 = document.forms["form3"]["password1"].value;
+  	var x2= document.forms["form3"]["password2"].value;
+  	if(x1!=x2){
+  		alert("Passwords dont match !");
+  	}
+  }
+</script>
+</head>
+<body>
+<div id="title">
+	<span>Medical Records</span>
+	<img src="wound.png"><br><br>
+	<ul>
+		<li><a href="home.html">Login</a></li>
+		<li id="active"><a>Signup</a></li>
+	</ul>
+</div>
+<div id="c1">
+	<button type="submit" name="action" value="doctor" id="list1" onclick="ani1()"><img src="download.png"><span>Doctor</span></button>
+	<button type="submit" name="action" value="patient" id="list2" onclick="ani2()"><img src="patient.png"><span>Patient</span></button>
+	<button type="submit" name="action" value="doctor" id="list3" onclick="ani3()"><img src="chemist.png"><span>Chemist</span></button>
+</div>
+<div id="c2">
+	<form name="form1"  action="dsignup.php" method="get">
+		<input type="text" name="name1" placeholder="First Name" class="i1" pattern="[A-Za-z]{1,}" required>
+		<input type="text" name="name2" placeholder="Last Name" class="i1" pattern="[A-Za-z]{1,}.{0,}" required><br>
+		<input type="password" name="password1" placeholder="Password" class="i1" required>
+		<input type="password" name="password2" placeholder="Re-type Password" class="i1" required><br>
+    <select name="special">
+      <option>Pediatrician</option>
+      <option>Obstetrician/Gynecologist</option>
+      <option>Surgeon</option>
+      <option>Psychiatrist</option>
+      <option>Cardiologist</option>
+      <option>Dermatologist</option>
+      <option>Endocrinologist</option>
+      <option>Anesthesiologist</option>
+    </select><br>
+		<input type="text" name="hname" placeholder="Hospital Name" required><br>
+		<input type="text" name="cname" placeholder="City" pattern="[A-Za-z]{1,}" required><br>
+		<input type="text" name="license" placeholder="License Number" pattern="[A-Za-z0-9]{1,}" required><br>
+		<input type="submit" value="Sign Up" class="button" onmouseover="validate1()">
+	</form>
+</div>
+<div id="c3">
+	<form name="form2" action="psignup.php" method="get">
+		<input type="text" name="name1" placeholder="First Name" class="i1" pattern="[A-Za-z]{1,}" required>
+		<input type="text" name="name2" placeholder="Last Name" class="i1" pattern="[A-Za-z]{1,}" required><br>
+		<input type="password" name="password1" placeholder="Password" required><br>
+		<input type="password" name="password2" placeholder="Re-type Password" required><br>
+		<input type="text" name="aadhar" Placeholder="Aadhar Number" pattern="[0-9]{12}" required><br>
+		<input type="text" name="cname" placeholder="City" pattern="[A-Za-z]{1,}" required><br>
+		<input type="submit" value="Sign Up" class="button" onmouseover="validate2()">
+	</form>
+</div>
+<div id="c4">
+	<form name="form3" action="csignup.php" method="get">
+		<input type="text" name="name1" placeholder="First Name" class="i1" pattern="[A-Za-z]{1,}" required>
+		<input type="text" name="name2" placeholder="Last Name" class="i1" pattern="[A-Za-z]{1,}" required><br>
+		<input type="password" name="password1" placeholder="Password" class="i1" required>
+		<input type="password" name="password2" placeholder="Re-type Password" class="i1" required><br>
+		<input type="text" name="sname" Placeholder="Shop name" required><br>
+		<input type="text" name="cname" placeholder="City" pattern="[A-Za-z]{1,}" required><br>
+		<input type="text" name="address" placeholder="Shop Address" required><br>
+		<input type="text" name="snumber" placeholder="Shop Registeration Number" required><br>
+		<input type="submit" value="Sign Up" onmouseover="validate3()" class="button">
+	</form>
+</div>
+</body>
+</html>
